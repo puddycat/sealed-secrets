@@ -1,1 +1,1 @@
-# sealed-secrets
+# Sealed Secrets
