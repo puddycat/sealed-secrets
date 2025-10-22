@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 #
-# rabbitmq/bin/build
+# sealed-secrets/bin/build
 #
 # raymondstrose@hotmail.com
 #
-#   Build a RabbitMQ base image.
+#   Build a Sealed Secrets base image.
 #
 
 append () { sed -e "s?\$?$@?"; }
@@ -171,11 +171,11 @@ main ()
 				BUILD_HOME_DIR		"/home/build"
 				BUILD_UID			"1001"
 
-				BASE_IMAGE          "rabbitmq"
+				BASE_IMAGE          "sealed-secrets"
 				BASE_IMAGE_TAG	    "4.1.4"
 
 				DOCKER_IMAGE_PREFIX	"raymondstrose/"
-				DOCKER_IMAGE_NAME	"rabbitmq"
+				DOCKER_IMAGE_NAME	"sealed-secrets"
 				DOCKER_IMAGE_TAG	"\$BASE_IMAGE_TAG"
 				#DOCKER_ARCH			"amd64"
 				DOCKER_SCAN			false

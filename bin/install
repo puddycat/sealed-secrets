@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 #
-# rabbitmq/bin/install
+# sealed-secrets/bin/install
 #
 # raymondstrose@hotmail.com
 #
-#   Install RabbitMQ within a Kubernetes cluster.
+#   Install Sealed Secrets within a Kubernetes cluster.
 #
 
 append () { sed -e "s?\$?$@?"; }
@@ -35,7 +35,7 @@ function execute ()
 
 install ()
 {
-	execute helm install $HELM_RELEASE_NAME oci://registry-1.docker.io/bitnamicharts/rabbitmq || return $?;
+	execute helm install $HELM_RELEASE_NAME oci://registry-1.docker.io/bitnamicharts/sealed-secrets || return $?;
 
 	return 0;
 }
@@ -82,7 +82,7 @@ main ()
 				export REMOVE_MODE=false;
 				export NOOP_MODE=false;
 
-				export HELM_RELEASE_NAME="rabbitmq";
+				export HELM_RELEASE_NAME="sealed-secrets";
 				EOF
 		fi;
 

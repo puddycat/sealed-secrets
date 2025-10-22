@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 #
-# rabbitmq/bin/helm-install
+# sealed-secrets/bin/helm-install
 #
 # raymondstrose@hotmail.com
 #
-#   Install a RabbitMQ HELM chart.
+#   Install a Sealed Secrets HELM chart.
 #
 
 append () { sed -e "s?\$?$@?"; }
@@ -158,13 +158,13 @@ main ()
 	export VERBOSE_MODE=false;
 	export NOOP_MODE=false;
 	export IMAGE_PREFIX="";
-	export IMAGE_NAME="rabbitmq";
+	export IMAGE_NAME="sealed-secrets";
 	export IMAGE_TAG="14.5-alpine3.16";
 	export USE_BUILDX=true;
 	#export BUILDX_PLATFORMS="linux/amd64,linux/arm64,linux/riscv64,linux/ppc64le,linux/s390x,linux/386,linux/arm/v7,linux/arm/v6";
 	export BUILDX_PLATFORMS="linux/amd64,linux/arm64,linux/arm/v7";
 	export REMOVE_MODE=false;
-	export NAMESPACE_NAME="rabbitmq";
+	export NAMESPACE_NAME="sealed-secrets";
 	export STATEFUL_SET_MODE=false;
 	export DEPLOYMENT_MODE=false;
 	export CHART_NAME=$(awk '/^name: / { print $2; }' Chart.yaml);	# As defined in Chart.yaml

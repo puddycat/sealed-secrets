@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 #
-# rabbitmq/bin/build-all
+# sealed-secrets/bin/build-all
 #
 # raymondstrose@hotmail.com
 #
-#   Build a RabbitMQ base image.
+#   Build a Sealed Secrets base image.
 #
 
 for name in 3.13.7 4.0.9 4.1.4; do bin/build --base-image-tag=$name; done;
